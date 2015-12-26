@@ -5,7 +5,7 @@ endif
 
 set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-		 
+
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'scrooloose/nerdtree'
@@ -13,6 +13,8 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'altercation/vim-colors-solarized'
+call neobundle#end()
 
 
 set statusline+=%#warningmsg#
@@ -28,7 +30,7 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 
 filetype plugin indent on
-set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
+"set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
 set encoding=utf-8
 
 set laststatus=2
@@ -38,4 +40,9 @@ set incsearch
 let g:indentLine_char = '|'
 set list listchars=trail:~,tab:\|\ 
 set cursorline
-call neobundle#end()
+set tabstop=4
+
+syntax enable
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
